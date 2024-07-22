@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <link rel="icon" href="zinesmartech 3.png" type="image/png">
+  <title>Zinesmartech</title>
+  
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+        emailjs.init("CYpKBYyTjbQT2qzzt");
+    })();
+  </script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const btn = document.getElementById('button');
+
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            btn.value = 'Sending...';
+
+            const serviceID = 'service_wq6t7n3';  
+            const templateID = 'template_cs4utll'; 
+
+            emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                btn.value = 'Send Email';
+                alert('Email sent successfully !!');
+                this.reset(); 
+            }, (err) => {
+                btn.value = 'Send Email';
+                alert(JSON.stringify(err));
+            });
+        });
+    });
+</script>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="#">
+          <img src="zinesmartech 1.png" alt="logo" />
+          <span>Zinesmartech</span>
+        </a>
+      </div>
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="#home">À propos</a></li>
+      <li><a href="#services">Nos Services</a></li>
+      <li><a href="#product">Nos Produits</a></li>
+      <li><a href="#Contact">Contact</a></li>
+
+    </ul>
+  </nav>
+  <header id="home" class="header__container">
+    <div class="header__image">
+      <img src="Why-Digital-Door-Lock-in-Singapore-Are-Best-For-Your-Business.jpg" alt="header" />
+    </div>
+    <div class="header__content">
+      <h2>Security Guard Service</h2>
+      <h1>
+        Sécurisez Votre Maison <br /><span class="h1__span-2">avec</span>
+        <span class="h1__span-1">Zinesmartech</span>
+      </h1>
+      <div class="text-container" id="textContainer">
+        <p>
+          Bienvenue chez Zinesmartech, votre partenaire de confiance pour la sécurité de votre maison et de votre entreprise. Nous offrons des solutions innovantes et personnalisées pour garantir votre confort et votre tranquillité d'esprit.Notre expertise couvre un large éventail de services, incluant l'installation de serrures intelligentes, la gestion des clés, et des systèmes avancés de contrôle vocal et d'interface intuitive. Nous comprenons que la sécurité est primordiale, c'est pourquoi nous utilisons des technologies de pointe pour vous offrir une protection maximale. Avec Zinesmartech, bénéficiez d'une sécurité optimale et d'un confort incomparable pour vous et vos proches. Faites confiance à notre équipe d'experts pour transformer votre espace en un lieu sûr et intelligent, où la sérénité et la commodité sont au rendez-vous
+
+        </p>
+      </div>
+      <div class="header__btn">
+        <button class="btn" onclick="toggleText()">Discover more</button>
+      </div>
+      <ul class="socials">
+        <li>
+          <a href="https://www.facebook.com/profile.php?id=61559596302000&mibextid=ZbWKwL"><i
+              class="ri-facebook-circle-fill"></i></a>
+        </li>
+        <li>
+          <a href="mailto:zinesmartech@gmail.com"><i class="ri-mail-fill"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/zinesmartech?igsh=MTgwNjQxa2Ryc2oydA=="><i
+              class="ri-instagram-fill"></i></a>
+        </li>
+      </ul>
+
+
+
+    </div>
+  </header>
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Nos services</h2>
+      <div class="services-list">
+
+        <div class="service-item">
+          <i class="ri-lock-fill"></i>
+          <h3>Installation de Serrures Intelligentes</h3>
+          <p>Installation experte de serrures intelligentes de pointe pour votre domicile ou votre entreprise.</p>
+        </div>
+
+        <div class="service-item">
+          <i class="ri-key-fill"></i>
+          <h3>Gestion des Clés</h3>
+          <p>Gestion efficace des clés et des systèmes de contrôle d'accès adaptés à vos besoins.</p>
+        </div>
+        <div class="service-item">
+          <i class="ri-mic-fill"></i>
+          <h3>Contrôle Vocal & Interface Intuitive</h3>
+          <p>Le contrôle vocal permet une utilisation vocale sans effort, tandis que l'interface intuitive assure une interaction utilisateur aisée.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="product" class="section__container">
+    <div class="product-container">
+      <h2>Nos produits</h2>
+      <div class="product-grid">
+        <div class="product-item">
+          <img
+            src="zRxRzRp7qsnOM7XbzQ9xvVx1KeL0Ry-metac2VycnVyZS1pbnRlbGxpZ2VudGUteDktd2ktZmktZWxlY3Jlc2lzdG8tZWxlY3Jlc2lzdG8tYmluYWEtNDY0Mzg4XzEwODB4MTA4MC5qcGc=-.jpg"
+            alt="Product 1">
+          <h3>M1 PRO WIFI TUYA</h3>
+          <p></p>
+        </div>
+        <div class="product-item">
+          <img src="XuQT7ScMVk08hqWSPZU49mcsaV9vWl-metaX3BkdDJfMF8yXzhfMl83MDB4NzAwX0FBQUFONjMwMjguanBn-.png"
+            alt="Product 2">
+          <h3>X3 WIFI TUYA</h3>
+          <p></p>
+        </div>
+        <div class="product-item">
+          <img src="ywEZ9KhtYOgZYW32Dqf0ubQk58BQpw-metaSDA3MjRkYjAwZDgyYTQ3ZDk4MWIwYjZiYzdjYjQ5Mjc0SCAoMSkucG5n-.png"
+            alt="Product 3">
+          <h3>X2 BLUETOOTH TTLOCK</h3>
+          <p></p>
+        </div>
+        <div class="product-item">
+          <img src="vsX29WUuXdIkbcFanVZMt1djWbKM5P-metaMS5wbmc=-.png" alt="Product 4">
+          <h3>X1 BLUETOOTH TTLOCK</h3>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div id="Contact" class="form-container">
+      <form id="form">
+        <h2>Contactez-nous</h2>
+        <div class="form-group">
+          <span class="es-input-group-text">
+            <i class="bi bi-person-fill"></i></span>
+          <input type="text" id="name" name="name" placeholder="Nom complet" required>
+        </div>
+        <div class="form-group">
+          <span class="es-input-group-text">
+            <i class="bi bi-envelope-fill"></i></span>
+          <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <span class="es-input-group-text">
+            <i class="bi bi-telephone-fill"></i></span>
+          <input type="tel" id="number" name="number" placeholder="Numéro de téléphone" required>
+        </div>
+        <div class="form-group">
+          <span class="es-input-group-text">
+            <i class="bi bi-map-fill"></i></span>
+          <input type="text" id="city" name="city" placeholder="Ville" required>
+        </div>
+        <div class="form-group">
+          <textarea style="width: 100%; border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px; " id="message" name="message" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <button type="submit" class="btn" id="button" value="Send Email" >Envoyer</button>
+      </form>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <h2>Contactez-nous</h2>
+      <p>Email: <a href="mailto:zinesmartech@gmail.com">zinesmartech@gmail.com</a></p>
+      <p>Téléphone: <a href="tel:06 10 13 27 45"></a>0610 13 27 45</p>
+      <div class="footer__socials">
+        <a href="https://www.instagram.com/zinesmartech?igsh=MTgwNjQxa2Ryc2oydA== "><i
+            class="ri-instagram-fill"></i></a>
+        <a href="mailto:zinesmartech@gmail.com"><i class="ri-mail-fill"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61559596302000&mibextid=ZbWKwL"><i
+            class="ri-facebook-fill"></i></a>
+      </div>
+    </div>
+    <div class="header__bar">
+      Copyright © 2024 Zinesmartech . All rights reserved.
+    </div>
+  </footer>
+
+
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
